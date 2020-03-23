@@ -6,7 +6,7 @@ using System.Threading;
 
 class PrimeNumberExample
 {
-    public static int isPrim(int n)
+    public static int IsPrim(int n)
     {
         int m, i, flag = 0;
         m = n / 2;
@@ -20,24 +20,24 @@ class PrimeNumberExample
         }
         return flag;
     }
-    public int metoda1(int n)
+    public int GetMaxPrime1(int n)
     {
         int m = 0, i;
         for (i = 2; i < n; i++)
         {
-            if (isPrim(i) == 0)
+            if (IsPrim(i) == 0)
             {
                 m = i;
             }
         }
         return m;
     }
-    public int metoda2(int n)
+    public int GetMaxPrime2(int n)
     {
         int i;
-        for (i = n - 1; i >= 2; i--)
+        for (i = n - 1; i > 2; i--)
         {
-            if (isPrim(i) == 0)
+            if (IsPrim(i) == 0)
             {
                 return i;
             }
@@ -48,34 +48,34 @@ class PrimeNumberExample
 class Program
 {
     static ConcurrentQueue<String> log = new ConcurrentQueue<String>();
-    public static void Metoda1(object x)
+    public static void Thread1(object nr)
     {
-        String Timestamp = DateTime.Now.ToString("HH:mm:ss");
-        log.Enqueue("Start fir1: " + Timestamp + "; Numar natural dat = " + x.ToString());
+        String timestamp = DateTime.Now.ToString("HH:mm:ss");
+        log.Enqueue("Start fir1: " + timestamp + "; Numar natural dat = " + nr.ToString());
         PrimeNumberExample P = new PrimeNumberExample();
-        int Nr = P.metoda1((int)x);
-        Timestamp = DateTime.Now.ToString("HH:mm:ss");
-        log.Enqueue("End fir1: " + Timestamp + "; Numar prim =  " + Nr.ToString());
+        int prime = P.GetMaxPrime1((int)nr);
+        timestamp = DateTime.Now.ToString("HH:mm:ss");
+        log.Enqueue("End fir1: " + timestamp + "; Numar prim =  " + prime.ToString());
 
     }
-    public static void Metoda2(object y)
+    public static void Thread2(object nr)
     {
-        String Timestamp = DateTime.Now.ToString("HH:mm:ss");
-        log.Enqueue("Start fir2: " + Timestamp + "; Numar natural dat = " + y.ToString());
+        String timestamp = DateTime.Now.ToString("HH:mm:ss");
+        log.Enqueue("Start fir2: " + timestamp + "; Numar natural dat = " + nr.ToString());
         PrimeNumberExample P = new PrimeNumberExample();
-        int Nr = P.metoda2((int)y);
-        Timestamp = DateTime.Now.ToString("HH:mm:ss");
-        log.Enqueue("End fir2: " + Timestamp + "; Numar prim =  " + Nr.ToString());
+        int prime = P.GetMaxPrime2((int)nr);
+        timestamp = DateTime.Now.ToString("HH:mm:ss");
+        log.Enqueue("End fir2: " + timestamp + "; Numar prim =  " + prime.ToString());
     }
     public static void Main(string[] args)
     {
-        int x = 5441;
-        Thread t1 = new Thread(Metoda1);
-        Thread t2 = new Thread(Metoda2);
-        t1.Start(x);
-        t2.Start(x);
-        t1.Join();
-        t2.Join();
+        int number = 726;
+        Thread thread1 = new Thread(Thread1);
+        Thread thread2 = new Thread(Thread2);
+        thread1.Start(number);
+        thread2.Start(number);
+        thread1.Join();
+        thread2.Join();
         List<string> log_l = log.ToArray().ToList();
         foreach (string s in log_l)
         {
