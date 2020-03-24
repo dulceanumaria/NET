@@ -1,0 +1,11 @@
+C:\Users\marina\source\repos\PostComment\bin\Debug\PostComment.dll.config
+C:\Users\marina\source\repos\PostComment\bin\Debug\PostComment.dll
+C:\Users\marina\source\repos\PostComment\bin\Debug\PostComment.pdb
+C:\Users\marina\source\repos\PostComment\bin\Debug\EntityFramework.dll
+C:\Users\marina\source\repos\PostComment\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\marina\source\repos\PostComment\bin\Debug\EntityFramework.xml
+C:\Users\marina\source\repos\PostComment\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\marina\source\repos\PostComment\obj\Debug\PostComment.csprojAssemblyReference.cache
+C:\Users\marina\source\repos\PostComment\obj\Debug\PostComment.csproj.CopyComplete
+C:\Users\marina\source\repos\PostComment\obj\Debug\PostComment.dll
+C:\Users\marina\source\repos\PostComment\obj\Debug\PostComment.pdb
