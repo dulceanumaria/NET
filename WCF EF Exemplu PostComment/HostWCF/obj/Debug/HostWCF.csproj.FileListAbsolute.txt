@@ -1,0 +1,14 @@
+C:\Users\marina\source\repos\HostWCF\bin\Debug\HostWCF.exe.config
+C:\Users\marina\source\repos\HostWCF\bin\Debug\HostWCF.exe
+C:\Users\marina\source\repos\HostWCF\bin\Debug\HostWCF.pdb
+C:\Users\marina\source\repos\HostWCF\bin\Debug\ObjectWCF.dll
+C:\Users\marina\source\repos\HostWCF\bin\Debug\PostComment.dll
+C:\Users\marina\source\repos\HostWCF\bin\Debug\EntityFramework.dll
+C:\Users\marina\source\repos\HostWCF\bin\Debug\ObjectWCF.pdb
+C:\Users\marina\source\repos\HostWCF\bin\Debug\PostComment.pdb
+C:\Users\marina\source\repos\HostWCF\bin\Debug\PostComment.dll.config
+C:\Users\marina\source\repos\HostWCF\bin\Debug\EntityFramework.xml
+C:\Users\marina\source\repos\HostWCF\obj\Debug\HostWCF.csprojAssemblyReference.cache
+C:\Users\marina\source\repos\HostWCF\obj\Debug\HostWCF.csproj.CopyComplete
+C:\Users\marina\source\repos\HostWCF\obj\Debug\HostWCF.exe
+C:\Users\marina\source\repos\HostWCF\obj\Debug\HostWCF.pdb
