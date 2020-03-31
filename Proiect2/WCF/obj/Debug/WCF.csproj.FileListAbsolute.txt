@@ -1,0 +1,9 @@
+C:\Users\marina\source\repos\WCF\bin\Debug\WCF.dll
+C:\Users\marina\source\repos\WCF\bin\Debug\WCF.pdb
+C:\Users\marina\source\repos\WCF\bin\Debug\ModelFirst.dll
+C:\Users\marina\source\repos\WCF\bin\Debug\ModelFirst.pdb
+C:\Users\marina\source\repos\WCF\bin\Debug\ModelFirst.dll.config
+C:\Users\marina\source\repos\WCF\obj\Debug\WCF.csprojAssemblyReference.cache
+C:\Users\marina\source\repos\WCF\obj\Debug\WCF.csproj.CopyComplete
+C:\Users\marina\source\repos\WCF\obj\Debug\WCF.dll
+C:\Users\marina\source\repos\WCF\obj\Debug\WCF.pdb
