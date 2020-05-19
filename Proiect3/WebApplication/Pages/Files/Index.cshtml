@@ -1,0 +1,89 @@
+﻿@page
+@model WebApplication.Pages.Files.IndexModel
+@{
+    ViewData["Title"] = "Index";
+}
+<h1>Index</h1>
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Files[0].Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Files[0].nume_fisier)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Files[0].cale)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Files[0].data_creare)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Files[0].locatie)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Files[0].eveniment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Files[0].peisaj)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Files[0].descriere)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Files[0].del)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Files)
+        {
+        <tr style="font-size:small">
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nume_fisier)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cale)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.data_creare)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.locatie)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.eveniment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.peisaj)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.descriere)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.del)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Useris.Count)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Persoanes.Count)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="/Comments/List" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a> |
+                <a asp-page="/Comments/Create" asp-route-id="@item.Id">Add a Comment</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
