@@ -1,0 +1,60 @@
+﻿@page
+@model WebApplication.Pages.Files.CreateModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FilesDTO.nume_fisier" class="control-label"></label>
+                <input asp-for="FilesDTO.nume_fisier" class="form-control" />
+                <span asp-validation-for="FilesDTO.nume_fisier" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FilesDTO.cale" class="control-label"></label>
+                <input asp-for="FilesDTO.cale" class="form-control" />
+                <span asp-validation-for="FilesDTO.cale" class="textdanger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FilesDTO.data_creare" class="control-label"></label>
+                <input asp-for="FilesDTO.data_creare" class="form-control" />
+                <span asp-validation-for="FilesDTO.data_creare" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FilesDTO.locatie" class="control-label"></label>
+                <input asp-for="FilesDTO.locatie" class="form-control" />
+                <span asp-validation-for="FilesDTO.locatie" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FilesDTO.eveniment" class="control-label"></label>
+                <input asp-for="FilesDTO.eveniment" class="form-control" />
+                <span asp-validation-for="FilesDTO.eveniment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FilesDTO.peisaj" class="control-label"></label>
+                <input asp-for="FilesDTO.peisaj" class="form-control" />
+                <span asp-validation-for="FilesDTO.peisaj" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FilesDTO.descriere" class="control-label"></label>
+                <input asp-for="FilesDTO.descriere" class="form-control" />
+                <span asp-validation-for="FilesDTO.descriere" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+@section Scripts {
+ @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

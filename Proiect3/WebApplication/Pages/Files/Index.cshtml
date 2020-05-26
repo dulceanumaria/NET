@@ -3,10 +3,28 @@
 @{
     ViewData["Title"] = "Index";
 }
-<h1>Index</h1>
+    <h1>MyPhotos - numar fisiere: @Html.DisplayFor(model => model.Files.Count)</h1>
 <p>
     <a asp-page="Create">Create New</a>
 </p>
+<form>
+    <p>
+        Cauta dupa locatie: <input type="text" asp-for="SearchString" />
+        <input type="submit" value="Cauta" />
+    </p>
+</form>
+<form>
+    <p>
+        Cauta dupa peisaj: <input type="text" asp-for="SearchPeisaj" />
+        <input type="submit" value="Cauta" />
+    </p>
+</form>
+<form>
+    <p>
+        Cauta dupa eveniment: <input type="text" asp-for="SearchEveniment" />
+        <input type="submit" value="Cauta" />
+    </p>
+</form>
 <table class="table">
     <thead>
         <tr>
@@ -42,48 +60,36 @@
     </thead>
     <tbody>
         @foreach (var item in Model.Files)
-        {
-        <tr style="font-size:small">
-            <td>
-                @Html.DisplayFor(modelItem => item.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.nume_fisier)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.cale)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.data_creare)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.locatie)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.eveniment)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.peisaj)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.descriere)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.del)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Useris.Count)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Persoanes.Count)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-page="/Comments/List" asp-route-id="@item.Id">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a> |
-                <a asp-page="/Comments/Create" asp-route-id="@item.Id">Add a Comment</a>
-            </td>
-        </tr>
+        {   
+            <tr style="font-size:small">
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nume_fisier)
+                </td>
+                <td>
+                    <a href='@Url.Content(item.cale+@"/"+item.nume_fisier)'><img src='@Url.Content(item.cale+@"/"+item.nume_fisier)' style="max-height: 100px; max-width: 100px;" /></a>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.data_creare)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.locatie)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.eveniment)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.peisaj)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.descriere)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Useris.Count)
+                </td>
+            </tr>
         }
     </tbody>
 </table>
