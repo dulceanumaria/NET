@@ -118,3 +118,4 @@ C:\Users\marina\Desktop\NET\Proiect2\WebApplication\obj\Debug\netcoreapp3.1\WebA
 C:\Users\marina\Desktop\NET\Proiect2\WebApplication\obj\Debug\netcoreapp3.1\WebApplication.dll
 C:\Users\marina\Desktop\NET\Proiect2\WebApplication\obj\Debug\netcoreapp3.1\WebApplication.pdb
 C:\Users\marina\Desktop\NET\Proiect2\WebApplication\obj\Debug\netcoreapp3.1\Razor\Pages\Files\Index.cshtml.g.cs
+C:\Users\marina\Desktop\NET\Proiect2\WebApplication\obj\Debug\netcoreapp3.1\Razor\Pages\Files\Create.cshtml.g.cs
