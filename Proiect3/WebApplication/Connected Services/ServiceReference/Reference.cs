@@ -14,7 +14,7 @@ namespace ServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Files", Namespace="http://schemas.datacontract.org/2004/07/ModelFirst")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Files", Namespace="http://schemas.datacontract.org/2004/07/ModelFirst", IsReference=true)]
     public partial class Files : object
     {
         
@@ -186,7 +186,7 @@ namespace ServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Persoane", Namespace="http://schemas.datacontract.org/2004/07/ModelFirst")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Persoane", Namespace="http://schemas.datacontract.org/2004/07/ModelFirst", IsReference=true)]
     public partial class Persoane : object
     {
         
@@ -253,7 +253,7 @@ namespace ServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Useri", Namespace="http://schemas.datacontract.org/2004/07/ModelFirst")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Useri", Namespace="http://schemas.datacontract.org/2004/07/ModelFirst", IsReference=true)]
     public partial class Useri : object
     {
         
@@ -374,6 +374,18 @@ namespace ServiceReference
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InterfaceWCF/GetFiles", ReplyAction="http://tempuri.org/InterfaceWCF/GetFilesResponse")]
         System.Threading.Tasks.Task<System.Collections.Generic.List<ServiceReference.Files>> GetFilesAsync(string Nume_fisier, string Cale, string Locatie, string Eveniment, string Peisaj);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InterfaceWCF/GetAllFiles", ReplyAction="http://tempuri.org/InterfaceWCF/GetAllFilesResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<ServiceReference.Files>> GetAllFilesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InterfaceWCF/GetFilesByLocatie", ReplyAction="http://tempuri.org/InterfaceWCF/GetFilesByLocatieResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<ServiceReference.Files>> GetFilesByLocatieAsync(string Locatie);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InterfaceWCF/GetFilesByPeisaj", ReplyAction="http://tempuri.org/InterfaceWCF/GetFilesByPeisajResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<ServiceReference.Files>> GetFilesByPeisajAsync(string Peisaj);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InterfaceWCF/GetFilesByEveniment", ReplyAction="http://tempuri.org/InterfaceWCF/GetFilesByEvenimentResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<ServiceReference.Files>> GetFilesByEvenimentAsync(string Eveniment);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InterfaceWCF/GetPerson", ReplyAction="http://tempuri.org/InterfaceWCF/GetPersonResponse")]
         System.Threading.Tasks.Task<System.Collections.Generic.List<ServiceReference.Persoane>> GetPersonAsync(string Nume_persoana);
         
@@ -473,6 +485,26 @@ namespace ServiceReference
         public System.Threading.Tasks.Task<System.Collections.Generic.List<ServiceReference.Files>> GetFilesAsync(string Nume_fisier, string Cale, string Locatie, string Eveniment, string Peisaj)
         {
             return base.Channel.GetFilesAsync(Nume_fisier, Cale, Locatie, Eveniment, Peisaj);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<ServiceReference.Files>> GetAllFilesAsync()
+        {
+            return base.Channel.GetAllFilesAsync();
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<ServiceReference.Files>> GetFilesByLocatieAsync(string Locatie)
+        {
+            return base.Channel.GetFilesByLocatieAsync(Locatie);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<ServiceReference.Files>> GetFilesByPeisajAsync(string Peisaj)
+        {
+            return base.Channel.GetFilesByPeisajAsync(Peisaj);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<ServiceReference.Files>> GetFilesByEvenimentAsync(string Eveniment)
+        {
+            return base.Channel.GetFilesByEvenimentAsync(Eveniment);
         }
         
         public System.Threading.Tasks.Task<System.Collections.Generic.List<ServiceReference.Persoane>> GetPersonAsync(string Nume_persoana)
